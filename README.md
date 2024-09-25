@@ -78,4 +78,4 @@ Sinta-se à vontade para abrir uma issue ou enviar um pull request se você quis
 
 ## Licença
 
-Este projeto está licenciado sob a [GNU General Public License v3.0](LICENSE).
+Este projeto está licenciado sob a [GPL-3.0 license](LICENSE).
