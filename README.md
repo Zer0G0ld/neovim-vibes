@@ -1,10 +1,12 @@
 # neovim-vibes
 
-# Neovim Custom Configuration
+> **OBS**: Caso não saiba, deve ser tudo instalado dentro do diretório `.config/nvim/`. Só assim funcionará, então certifique-se de estar no diretório quando clonar o repositório.
+
+## Neovim Custom Configuration
 
 Este repositório contém a configuração personalizada do Neovim, incluindo um tema feito à mão e ajustes no `init.lua` e `theme.lua`. Se você deseja usar esta configuração para personalizar seu Neovim com cores vibrantes e suporte LSP, siga as instruções abaixo.
 
-## Requisitos
+### Requisitos
 
 Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
 
@@ -12,18 +14,17 @@ Antes de começar, certifique-se de que você tem os seguintes requisitos instal
 - [Packer](https://github.com/wbthomason/packer.nvim) (gerenciador de plugins)
 - Git (para clonar os repositórios)
   
-## Instalação
+### Instalação
 
-### 1. Clone o Repositório
+#### 1. Clone o Repositório
 
 Clone este repositório em seu diretório de configuração do Neovim:
 
 ```bash
-git clone https://github.com/Zer0G0ld/neovim-vibes
-~/.config/nvim
+git clone https://github.com/Zer0G0ld/neovim-vibes ~/.config/nvim
 ```
 
-### 2. Instale o Packer (se ainda não tiver instalado)
+#### 2. Instale o Packer (se ainda não tiver instalado)
 
 Caso o Packer ainda não esteja instalado, ele será instalado automaticamente ao iniciar o Neovim pela primeira vez com esta configuração. Para verificar, abra o Neovim e execute:
 
@@ -31,7 +32,9 @@ Caso o Packer ainda não esteja instalado, ele será instalado automaticamente a
 :PackerSync
 ```
 
-### 3. Instale os Plugins
+> **Observação**: O comando `PackerSync` sincroniza plugins e instala qualquer plugin que ainda não esteja presente.
+
+#### 3. Instale os Plugins
 
 Abra o Neovim e rode o seguinte comando para instalar os plugins:
 
@@ -39,16 +42,16 @@ Abra o Neovim e rode o seguinte comando para instalar os plugins:
 :PackerInstall
 ```
 
-### 4. Use a Configuração do Tema
+#### 4. Use a Configuração do Tema
 
 A configuração do tema está no arquivo `lua/theme.lua`. O arquivo `init.lua` carrega essa configuração, então você pode personalizá-la conforme necessário. O tema já está configurado para ser aplicado automaticamente ao iniciar o Neovim.
 
-## Estrutura dos Arquivos
+### Estrutura dos Arquivos
 
 - `init.lua`: Arquivo principal que carrega plugins, opções e o tema.
 - `lua/theme.lua`: Configuração personalizada do tema, incluindo cores para variáveis, classes, tipos de dados, erros, avisos e informações do LSP.
 
-## Temas e Customizações
+### Cores Padrão
 
 As cores padrão no `theme.lua` são as seguintes:
 
@@ -67,15 +70,15 @@ As cores padrão no `theme.lua` são as seguintes:
 
 Você pode sobrescrever as cores definindo um objeto `custom_colors` no `theme.lua` ou editando diretamente as cores no arquivo.
 
-## Funcionalidades Adicionais
+### Funcionalidades Adicionais
 
 - **Barra de status**: Configuração do plugin `lualine.nvim` com o tema `gruvbox`.
 - **Suporte LSP**: Cores para diagnósticos de erro, aviso e informações.
 
-## Contribuindo
+### Contribuindo
 
 Sinta-se à vontade para abrir uma issue ou enviar um pull request se você quiser contribuir com melhorias ou novas funcionalidades.
 
-## Licença
+### Licença
 
 Este projeto está licenciado sob a [GPL-3.0 license](LICENSE).
