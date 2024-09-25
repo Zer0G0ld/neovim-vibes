@@ -4,7 +4,7 @@
 
 ## Neovim Custom Configuration
 
-Este repositório contém a configuração personalizada do Neovim, incluindo um tema feito à mão e ajustes no `init.lua` e `theme.lua`. Se você deseja usar esta configuração para personalizar seu Neovim com cores vibrantes e suporte LSP, siga as instruções abaixo.
+Este repositório contém a configuração personalizada do Neovim, incluindo um tema feito à mão e ajustes no `init.lua` e `theme-vibes/theme.lua`. Se você deseja usar esta configuração para personalizar seu Neovim com cores vibrantes, suporte LSP e funcionalidades extras como o `telescope.nvim`, siga as instruções abaixo.
 
 ### Requisitos
 
@@ -12,8 +12,9 @@ Antes de começar, certifique-se de que você tem os seguintes requisitos instal
 
 - [Neovim](https://neovim.io/) (versão 0.5+)
 - [Packer](https://github.com/wbthomason/packer.nvim) (gerenciador de plugins)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep) (necessário para o `telescope.nvim`)
 - Git (para clonar os repositórios)
-  
+
 ### Instalação
 
 #### 1. Clone o Repositório
@@ -44,12 +45,12 @@ Abra o Neovim e rode o seguinte comando para instalar os plugins:
 
 #### 4. Use a Configuração do Tema
 
-A configuração do tema está no arquivo `lua/theme.lua`. O arquivo `init.lua` carrega essa configuração, então você pode personalizá-la conforme necessário. O tema já está configurado para ser aplicado automaticamente ao iniciar o Neovim.
+A configuração do tema está no arquivo `theme-vibes/theme.lua`. O arquivo `init.lua` carrega essa configuração, então você pode personalizá-la conforme necessário. O tema já está configurado para ser aplicado automaticamente ao iniciar o Neovim.
 
 ### Estrutura dos Arquivos
 
 - `init.lua`: Arquivo principal que carrega plugins, opções e o tema.
-- `lua/theme.lua`: Configuração personalizada do tema, incluindo cores para variáveis, classes, tipos de dados, erros, avisos e informações do LSP.
+- `theme-vibes/theme.lua`: Configuração personalizada do tema, incluindo cores para variáveis, classes, tipos de dados, erros, avisos e informações do LSP.
 
 ### Cores Padrão
 
@@ -74,6 +75,37 @@ Você pode sobrescrever as cores definindo um objeto `custom_colors` no `theme.l
 
 - **Barra de status**: Configuração do plugin `lualine.nvim` com o tema `gruvbox`.
 - **Suporte LSP**: Cores para diagnósticos de erro, aviso e informações.
+- **Telescope.nvim**: Ferramenta de busca poderosa para arquivos, buffers e muito mais.
+
+### Usando o `Telescope`
+
+Após instalar os plugins, você pode testar o `telescope.nvim` com os seguintes comandos no Neovim:
+
+- **Buscar Arquivos**:
+
+  ```vim
+  :Telescope find_files
+  ```
+
+- **Buscar Texto (Grep)**:
+
+  ```vim
+  :Telescope live_grep
+  ```
+
+- **Buscar Buffers**:
+
+  ```vim
+  :Telescope buffers
+  ```
+
+- **Buscar Tags de Ajuda**:
+
+  ```vim
+  :Telescope help_tags
+  ```
+
+Você também pode personalizar os atalhos no `init.lua` para facilitar o uso das funcionalidades do `Telescope`.
 
 ### Contribuindo
 
